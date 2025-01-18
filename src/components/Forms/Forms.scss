@@ -89,7 +89,7 @@
         }
 
         .checkmark {
-            color: white;
+            color: $white;
             font-size: 14px;
         }
     }
@@ -106,14 +106,14 @@
     .radio-option {
         display: flex;
         align-items: center;
-        color: white;
+        color: $white;
         cursor: pointer;
 
         input[type="radio"] {
             appearance: none;
             width: 20px;
             height: 20px;
-            border: 2px solid white;
+            border: 2px solid $white;
             border-radius: 50%;
             margin-right: 10px;
             position: relative;

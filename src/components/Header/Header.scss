@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary-dark;
+
+}
+
+.header-image {
+    width: 40%;
+    background-color: $white;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+}

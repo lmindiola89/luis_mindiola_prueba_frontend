@@ -1,0 +1,108 @@
+/* Estilos de la barra de navegación */
+@use '../../styles/variables' as *;
+
+
+.navbar {
+    background-color: $primary-dark;
+    padding: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.nav-links a {
+    color: $white;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $accent-color;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: $accent-color;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $primary-blue;
+    padding: 1rem;
+    border-radius: 4px;
+    transform: translateY(-20px);
+    width: 8rem;
+}
+
+.dropdown-content li {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para el submenú */
+.submenu {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.submenu>a::after {
+    // content: '▶';
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    background-color: $primary-blue;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 6rem;
+
+}
+
+.submenu-content li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.submenu:hover .submenu-content {
+    display: block;
+}
