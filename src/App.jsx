@@ -1,7 +1,10 @@
+import "./app.scss";
+import Footer from "./components/Footer/Footer";
+
 function App() {
   return (
     <>
-      <h1>Hola Mundo</h1>
+      <Footer />
     </>
   );
 }

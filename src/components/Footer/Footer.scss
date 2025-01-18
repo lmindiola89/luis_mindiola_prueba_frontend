@@ -1,0 +1,33 @@
+@use '../../styles/variables' as *;
+
+.footer {
+    background-color: $primary-dark;
+    color: $accent-color;
+    padding: 2rem;
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Tres columnas iguales
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; // Una sola columna en pantallas pequeñas
+        }
+    }
+
+    &-bottom {
+        text-align: center; // Centrar texto
+        // border-top: 1px solid #0C1726; // Línea divisoria
+        padding-top: 1rem;
+    }
+
+    .link-here {
+        color: $white;
+        ; // Enlaces con el color del texto
+    }
+
+    h3 {
+        color: $white; // Establece el color blanco para los h3 dentro del footer
+    }
+}
