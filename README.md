@@ -4,13 +4,12 @@ Prueba para el cargo de desarrollador frontend con react
 
 ## Deploy on Vercel
 
-[https://clone-01.vercel.app/](https://clone-01.vercel.app/)
-https://visionary-dasik-3752a8.netlify.app/
+[https://visionary-dasik-3752a8.netlify.app](https://visionary-dasik-3752a8.netlify.app)
 
 1. Clone the repository:
 
 ```
-git clone https://github.com/lmindiola89/clone-01.git
+git clone https://github.com/lmindiola89/luis_mindiola_prueba_frontend.git
 ```
 
 2. Open the project in your preferred code editor.
