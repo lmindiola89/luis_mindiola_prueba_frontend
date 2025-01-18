@@ -18,3 +18,54 @@
     }
 
 }
+
+/* Estilo del div */
+.header-image {
+    background: linear-gradient(45deg, #ff6f61, #6a1b9a);
+    /* Colores iniciales de fondo */
+    position: relative;
+    animation: cambiarColores 5s infinite alternate, moverFondo 10s infinite linear;
+}
+
+/* Animación para cambiar colores */
+@keyframes cambiarColores {
+    0% {
+        background: linear-gradient(45deg, #ff6f61, #6a1b9a);
+        /* Rojo y morado */
+    }
+
+    25% {
+        background: linear-gradient(45deg, #4caf50, #2196f3);
+        /* Verde y azul */
+    }
+
+    50% {
+        background: linear-gradient(45deg, #ffeb3b, #f44336);
+        /* Amarillo y rojo */
+    }
+
+    75% {
+        background: linear-gradient(45deg, #9c27b0, #03a9f4);
+        /* Morado y azul claro */
+    }
+
+    100% {
+        background: linear-gradient(45deg, #ff6f61, #6a1b9a);
+        /* Rojo y morado */
+    }
+}
+
+/* Animación para mover el fondo */
+@keyframes moverFondo {
+    0% {
+        background-position: left top;
+    }
+
+    50% {
+        background-position: right bottom;
+    }
+
+    100% {
+        background-position: left top;
+    }
+}

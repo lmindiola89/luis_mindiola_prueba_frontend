@@ -9,8 +9,8 @@ function Cardslider() {
     <div className="cardslider">
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={90}
-        slidesPerView={3}
+        spaceBetween={50}
+        slidesPerView={4}
         navigation
         pagination={{
           clickable: true,
@@ -55,48 +55,48 @@ const cards = [
     imageUrl: "https://placehold.co/400",
     title: "Lorem ipsum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati. Cum, vitae deserunt atque ea repudiandae fugit consectetur non.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati.",
   },
   {
     id: 2,
     imageUrl: "https://placehold.co/400",
     title: "Lorem ipsum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati. Cum, vitae deserunt atque ea repudiandae fugit consectetur non.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati.",
   },
   {
     id: 3,
     imageUrl: "https://placehold.co/400",
     title: "Lorem ipsum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati. Cum, vitae deserunt atque ea repudiandae fugit consectetur non.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati.",
   },
   {
     id: 4,
     imageUrl: "https://placehold.co/400",
     title: "Lorem ipsum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati. Cum, vitae deserunt atque ea repudiandae fugit consectetur non.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati.",
   },
   {
     id: 5,
     imageUrl: "https://placehold.co/400",
     title: "Lorem ipsum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati. Cum, vitae deserunt atque ea repudiandae fugit consectetur non.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati.",
   },
   {
     id: 6,
     imageUrl: "https://placehold.co/400",
     title: "Lorem ipsum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati. Cum, vitae deserunt atque ea repudiandae fugit consectetur non.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati.",
   },
   {
     id: 7,
     imageUrl: "https://placehold.co/400",
     title: "Lorem ipsum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati. Cum, vitae deserunt atque ea repudiandae fugit consectetur non.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod vitae, totam quis, rerum quidem error libero dolores accusantium suscipit obcaecati.",
   },
 ];
