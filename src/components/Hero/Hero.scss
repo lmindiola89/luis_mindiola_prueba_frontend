@@ -1,29 +1,34 @@
 @use '../../styles/variables' as *;
 
+// Estilos para el héroe
 .hero {
     background-color: $primary-dark;
     color: $white;
     padding: 4rem 2rem;
 }
 
+// Contenido del héroe
 .hero-content {
     display: flex;
     flex-direction: column;
 }
 
+// Estilos para h1
 .hero-content h1 {
     font-size: 3rem;
     font-weight: lighter;
 }
 
+// Estilos para h2
 .hero-content h2 {
     font-weight: bold;
     font-size: 2rem;
     margin: 1rem 0;
-
 }
 
+// Estilos para el botón CTA
 .cta-button {
+    font-family: $font-roboto;
     margin-top: 3rem;
     background-color: $primary-blue;
     color: $white;
@@ -46,6 +51,7 @@
     }
 }
 
+// Media query para pantallas pequeñas
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;

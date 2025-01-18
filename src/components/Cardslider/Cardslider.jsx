@@ -1,54 +1,53 @@
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "./Cardslider.scss";
+import { Navigation, Pagination } from "swiper/modules"; // Módulos de navegación y paginación de Swiper
+import { Swiper, SwiperSlide } from "swiper/react"; // Componentes Swiper y SwiperSlide
+import "swiper/css"; // Estilos básicos de Swiper
+import "swiper/css/navigation"; // Estilos para la navegación de Swiper
+import "./Cardslider.scss"; // Estilos personalizados
 
 function Cardslider() {
   return (
     <div className="cardslider">
+      {" "}
+      {/* Contenedor principal del slider */}
       <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={50}
-        slidesPerView={4}
-        navigation
-        pagination={{
-          clickable: true,
-        }}
+        modules={[Navigation, Pagination]} // Activa los módulos de navegación y paginación
+        spaceBetween={50} // Espacio entre los slides
+        slidesPerView={4} // Número de slides visibles por defecto
+        navigation // Habilita los controles de navegación
+        pagination={{ clickable: true }} // Paginación clickeable
         breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 90,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 90,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 90,
-          },
+          320: { slidesPerView: 1, spaceBetween: 90 }, // Configuración para pantallas pequeñas
+          768: { slidesPerView: 2, spaceBetween: 90 }, // Configuración para tablets
+          1024: { slidesPerView: 3, spaceBetween: 90 }, // Configuración para pantallas grandes
         }}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log("slide change")}
       >
+        {/* Mapea el array 'cards' para crear un SwiperSlide para cada objeto */}
         {cards.map((card) => (
           <SwiperSlide key={card.id}>
+            {" "}
+            {/* Cada slide tiene una key única */}
             <div className="card-content">
-              <img className="card-img" src={card.imageUrl} alt={card.title} />
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
+              {" "}
+              {/* Contenido de la card */}
+              <img
+                className="card-img"
+                src={card.imageUrl}
+                alt={card.title}
+              />{" "}
+              {/* Imagen de la card */}
+              <h3>{card.title}</h3> {/* Título de la card */}
+              <p>{card.description}</p> {/* Descripción de la card */}
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <p></p>
     </div>
   );
 }
 
-export default Cardslider;
+export default Cardslider; // Exporta el componente
 
+// Array de objetos 'cards' que contiene los datos de cada card
 const cards = [
   {
     id: 1,

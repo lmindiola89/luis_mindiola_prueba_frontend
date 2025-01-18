@@ -14,17 +14,17 @@ function Footer() {
         {/* Sección del footer con un título y párrafo */}
         <div className="footer-section">
           <h3>Lorem ipsum dolor amet</h3>
-          <p>consectetur adipiscing elit. Quisque eu consectetur mi.</p>
+          <p>Lorem ipsum dolor amet consectetur adipiscing elit.</p>
         </div>
         {/* Otra sección del footer */}
         <div className="footer-section">
           <h3>Lorem ipsum dolor amet</h3>
-          <p>consectetur adipiscing elit. Quisque eu consectetur mi.</p>
+          <p>Lorem ipsum dolor amet consectetur adipiscing elit..</p>
         </div>
         {/* Otra sección más */}
         <div className="footer-section">
           <h3>Lorem ipsum dolor amet</h3>
-          <p>consectetur adipiscing elit. Quisque eu consectetur mi.</p>
+          <p>Lorem ipsum dolor amet consectetur adipiscing elit.</p>
         </div>
       </div>
       {/* Contenedor de la parte inferior del footer */}

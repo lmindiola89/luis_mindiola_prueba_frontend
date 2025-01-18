@@ -1,22 +1,28 @@
-/* Estilos de la barra de navegación */
+/* Estilos barra de navegación */
 @use '../../styles/variables' as *;
-
 
 .navbar {
     background-color: $primary-dark;
+    /* Fondo */
     padding: 2rem;
+    /* Espaciado */
 }
 
 .nav-links {
     display: flex;
+    /* Fila */
     list-style: none;
+    /* Sin puntos */
     justify-content: space-between;
+    /* Espacio */
     padding: 0;
 }
 
 .nav-links a {
     color: $white;
+    /* Color */
     text-decoration: none;
+    /* Sin subrayado */
     position: relative;
     padding-bottom: 5px;
     transition: color 0.3s ease;
@@ -41,7 +47,7 @@
     width: 100%;
 }
 
-/* Estilos para el menú desplegable */
+/* Estilos menú desplegable */
 .dropdown {
     position: relative;
 }
@@ -68,19 +74,18 @@
     transform: translateY(0);
 }
 
-/* Estilos para el submenú */
+/* Estilos submenú */
 .submenu {
     position: relative;
     padding: 0.5rem 0;
 }
 
 .submenu>a::after {
-    // content: '▶';
+    // content: '▶'; 
     position: absolute;
     right: 10px;
     transition: transform 0.3s ease;
 }
-
 
 .submenu-content {
     display: none;
@@ -92,16 +97,13 @@
     border: 1px solid black;
     border-radius: 4px;
     width: 6rem;
-
 }
 
 .submenu-content li {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
 }
-
 
 .submenu:hover .submenu-content {
     display: block;

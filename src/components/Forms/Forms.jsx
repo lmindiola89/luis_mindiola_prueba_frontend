@@ -1,7 +1,8 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import "./Forms.scss";
+import { useState } from "react"; // Importa hook useState
+import PropTypes from "prop-types"; // Importa PropTypes para validación de props
+import "./Forms.scss"; // Estilos del formulario
 
+// Componente para cada opción seleccionable
 const Option = ({ label, checked, onChange }) => (
   <div className="select-option" onClick={onChange}>
     <div className={`checkbox ${checked ? "checked" : ""}`}>
@@ -12,11 +13,12 @@ const Option = ({ label, checked, onChange }) => (
 );
 
 Option.propTypes = {
-  label: PropTypes.string.isRequired,
-  checked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired, // Validación de tipo para label
+  checked: PropTypes.bool.isRequired, // Validación de tipo para checked
+  onChange: PropTypes.func.isRequired, // Validación de tipo para onChange
 };
 
+// Componente para cada opción de radio
 const RadioOption = ({ label, checked, onChange }) => (
   <label className="radio-option">
     <input type="radio" checked={checked} onChange={onChange} />
@@ -25,11 +27,12 @@ const RadioOption = ({ label, checked, onChange }) => (
 );
 
 RadioOption.propTypes = {
-  label: PropTypes.string.isRequired,
-  checked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired, // Validación de tipo para label
+  checked: PropTypes.bool.isRequired, // Validación de tipo para checked
+  onChange: PropTypes.func.isRequired, // Validación de tipo para onChange
 };
 
+// Componente para mostrar los datos del formulario
 const DisplayArea = ({ formData }) => (
   <div className="display-area">
     {Object.keys(formData).some((key) => formData[key].length > 0) ? (
@@ -51,20 +54,22 @@ DisplayArea.propTypes = {
     radioOption: PropTypes.string,
     name: PropTypes.string,
     email: PropTypes.string,
-  }).isRequired,
+  }).isRequired, // Validación de tipo para formData
 };
 
+// Componente principal del formulario
 function Form() {
   const [formData, setFormData] = useState({
-    selectedOptions: [],
-    radioOption: "",
-    name: "",
-    email: "",
+    selectedOptions: [], // Estado para opciones seleccionadas
+    radioOption: "", // Estado para opción de radio seleccionada
+    name: "", // Estado para el nombre
+    email: "", // Estado para el email
   });
-  const [isSelectOpen, setIsSelectOpen] = useState(false);
+  const [isSelectOpen, setIsSelectOpen] = useState(false); // Estado para controlar el desplegable
 
-  const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
+  const options = ["Option 1", "Option 2", "Option 3", "Option 4"]; // Opciones para seleccionar
 
+  // Maneja el cambio de selección en el desplegable
   const handleSelectChange = (option) => {
     setFormData((prev) => ({
       ...prev,
@@ -74,6 +79,7 @@ function Form() {
     }));
   };
 
+  // Maneja el cambio de selección en las opciones de radio
   const handleRadioChange = (option) => {
     setFormData((prev) => ({
       ...prev,
@@ -81,6 +87,7 @@ function Form() {
     }));
   };
 
+  // Maneja el cambio de valores en los campos de texto
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -89,18 +96,20 @@ function Form() {
     }));
   };
 
+  // Maneja el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    console.log("Form submitted:", formData); // Muestra los datos del formulario en consola
   };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__section">
+        {/* Contenedor para las opciones desplegables */}
         <div className={`select-container ${isSelectOpen ? "open" : ""}`}>
           <div
             className="select-header"
-            onClick={() => setIsSelectOpen(!isSelectOpen)}
+            onClick={() => setIsSelectOpen(!isSelectOpen)} // Controla la apertura del desplegable
           >
             Select
           </div>
@@ -111,7 +120,7 @@ function Form() {
                   key={option}
                   label={option}
                   checked={formData.selectedOptions.includes(option)}
-                  onChange={() => handleSelectChange(option)}
+                  onChange={() => handleSelectChange(option)} // Actualiza las opciones seleccionadas
                 />
               ))}
             </div>
@@ -120,19 +129,21 @@ function Form() {
       </div>
 
       <div className="form__section">
+        {/* Contenedor para las opciones de radio */}
         <div className="radio-container">
           {options.map((option) => (
             <RadioOption
               key={option}
               label={option}
-              checked={formData.radioOption === option}
-              onChange={() => handleRadioChange(option)}
+              checked={formData.radioOption === option} // Verifica si la opción de radio está seleccionada
+              onChange={() => handleRadioChange(option)} // Actualiza la opción seleccionada
             />
           ))}
         </div>
       </div>
 
       <div className="form__section">
+        {/* Contenedor para los campos de entrada */}
         <div className="input-group">
           <div className="input-field">
             <label htmlFor="name">Name:</label>
@@ -140,8 +151,8 @@ function Form() {
               id="name"
               type="text"
               name="name"
-              value={formData.name}
-              onChange={handleInputChange}
+              value={formData.name} // Valor del campo nombre
+              onChange={handleInputChange} // Maneja el cambio en el campo
             />
           </div>
           <div className="input-field">
@@ -150,13 +161,12 @@ function Form() {
               id="email"
               type="email"
               name="email"
-              value={formData.email}
-              onChange={handleInputChange}
+              value={formData.email} // Valor del campo email
+              onChange={handleInputChange} // Maneja el cambio en el campo
             />
           </div>
-
-          <DisplayArea formData={formData} />
-
+          <DisplayArea formData={formData} />{" "}
+          {/* Muestra los datos ingresados */}
           <button type="submit" className="submit-button">
             Submit
           </button>
@@ -166,4 +176,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default Form; // Exporta el componente Form

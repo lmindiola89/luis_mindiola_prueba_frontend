@@ -1,32 +1,32 @@
-@use '../../styles/variables' as *;
+@use '../../styles/variables' as *; // Importa las variables de estilo
 
 .cardslider {
-    height: 40rem;
-    padding: 4rem;
+    height: 40rem; // Altura del slider
+    padding: 4rem; // Espaciado interno del slider
 }
 
 .card-content {
-    height: 30rem;
-    background-color: #3C5973;
-    border-radius: 1rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    height: 30rem; // Altura de la card
+    background-color: #3C5973; // Color de fondo de la card
+    border-radius: 1rem; // Bordes redondeados
+    padding: 2rem; // Espaciado interno de la card
+    display: flex; // Flexbox para el diseño
+    flex-direction: column; // Dirección vertical
+    align-items: center; // Centra los elementos
+    gap: 1rem; // Espacio entre los elementos
 
     img {
-        width: 12rem;
-        height: 12rem;
-        border-radius: 50%;
+        width: 12rem; // Ancho de la imagen
+        height: 12rem; // Alto de la imagen
+        border-radius: 50%; // Hace la imagen circular
     }
 
     h3 {
-        font-size: 1.5rem;
-        color: $primary-dark;
+        font-size: 1.5rem; // Tamaño del título
+        color: $primary-dark; // Color del título
     }
 
     p {
-        color: $accent-color;
+        color: $accent-color; // Color de la descripción
     }
 }
